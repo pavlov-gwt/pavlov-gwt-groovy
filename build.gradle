@@ -1,0 +1,16 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'jacoco'
+
+defaultTasks 'clean', 'build', 'jacoco'
+
+version = '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:latest.release'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
