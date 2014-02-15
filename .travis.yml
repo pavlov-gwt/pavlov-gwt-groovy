@@ -1,7 +1,7 @@
 language: groovy
 
 before_install:
- - chmod -x gradlew
+ - chmod +x gradlew
 
 install:
-  - TERM=dumb ./gradlew
+  - TERM=dumb ./gradlew -i -S
