@@ -1,7 +1,7 @@
 language: groovy
 
-before_script:
+before_install:
  - chmod -x gradlew
 
-script:
+install:
   - TERM=dumb ./gradlew
