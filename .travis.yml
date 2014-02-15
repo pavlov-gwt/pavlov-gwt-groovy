@@ -1,2 +1,7 @@
----
-script: "gradlew"
+language: groovy
+
+before_install:
+ - chmod -x gradlew
+
+script: "./gradlew"
+
