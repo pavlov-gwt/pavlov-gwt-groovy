@@ -1,4 +1,4 @@
-package org.pavlov.spec;
+package com.github.pavlov.gwt.spec;
 
 import groovy.lang.Closure;
 
@@ -11,9 +11,9 @@ public class Spec {
     private Spec() {}
 
     /**
-     * @see org.pavlov.spec.Specification#given(String, groovy.lang.Closure)
+     * @see Specification#given(String, groovy.lang.Closure)
      */
-    public static Specification given(String givenText, Closure c) {
+	public static Specification given(String givenText, Closure<?> c) {
         return new Specification().given(givenText, c);
     }
 }

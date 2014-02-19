@@ -1,4 +1,4 @@
-package org.pavlov.report;
+package com.github.pavlov.gwt.report;
 
 public class StandardOutSpecReporter implements SpecReporter {
     @Override

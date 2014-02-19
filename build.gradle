@@ -1,9 +1,11 @@
 apply plugin: 'groovy'
+apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'jacoco'
 
 defaultTasks 'clean', 'build', 'jacoco'
 
+group = 'com.github.pavlov.gwt'
 version = '0.1.0'
 
 repositories {
@@ -14,3 +16,22 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:latest.release'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+task groovydocJar(type: Jar, dependsOn: groovydoc) {
+    classifier = 'javadoc'
+    from 'build/docs/groovydoc'
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+artifacts {
+    archives jar
+    archives groovydocJar
+    archives sourcesJar
+}
+
+//see for more publishing information
+//https://github.com/GradleFx/GradleFx/blob/develop/build.gradle
