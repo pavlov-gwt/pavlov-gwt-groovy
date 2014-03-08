@@ -1,10 +1,13 @@
 apply plugin: 'groovy'
+apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'jacoco'
 
 defaultTasks 'clean', 'build', 'jacoco'
 
-version = '0.1.0'
+group = 'com.github.pavlovspec'
+archivesBaseName = 'pavlovspec-for-groovy'
+version = '0.3.0'
 
 repositories {
     mavenCentral()
@@ -14,3 +17,22 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:latest.release'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+task groovydocJar(type: Jar, dependsOn: groovydoc) {
+    classifier = 'javadoc'
+    from 'build/docs/groovydoc'
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+artifacts {
+    archives jar
+    archives groovydocJar
+    archives sourcesJar
+}
+
+//see for more publishing information
+//https://github.com/GradleFx/GradleFx/blob/develop/build.gradle

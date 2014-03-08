@@ -1,9 +1,9 @@
-package org.pavlov.report;
+package com.github.pavlovspec.report;
 
 /**
  * Default adapter implementation of SpecReporter (doesn't do anything)
  */
-public class DefaultSpecReporter implements SpecReporter {
+public class NoOpSpecReporter implements SpecReporter {
 
     @Override
     public void report(String report) {}
