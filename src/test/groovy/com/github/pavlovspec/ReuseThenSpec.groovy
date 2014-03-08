@@ -1,6 +1,8 @@
-package com.github.pavlov.gwt.spec
+package com.github.pavlovspec
 
 import org.junit.Test
+
+import com.github.pavlovspec.Spec;
 
 /**
  * Created by Achilles on 2/12/14.

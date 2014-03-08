@@ -1,4 +1,4 @@
-package com.github.pavlov.gwt.report;
+package com.github.pavlovspec.report;
 
 /**
  * Default adapter implementation of SpecReporter (doesn't do anything)

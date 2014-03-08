@@ -1,4 +1,4 @@
-package com.github.pavlov.gwt.spec;
+package com.github.pavlovspec;
 
 import groovy.lang.Closure;
 
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.github.pavlov.gwt.report.SpecReporter;
-import com.github.pavlov.gwt.report.StandardOutSpecReporter;
+import com.github.pavlovspec.report.SpecReporter;
+import com.github.pavlovspec.report.StandardOutSpecReporter;
 
 public class Specification {
 

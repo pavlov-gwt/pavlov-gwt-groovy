@@ -1,4 +1,4 @@
-package com.github.pavlov.gwt.spec;
+package com.github.pavlovspec;
 
 import groovy.lang.Closure;
 

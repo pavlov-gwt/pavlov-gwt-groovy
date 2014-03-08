@@ -5,8 +5,9 @@ apply plugin: 'jacoco'
 
 defaultTasks 'clean', 'build', 'jacoco'
 
-group = 'com.github.pavlov.gwt'
-version = '0.1.0'
+group = 'com.github.pavlovspec'
+archivesBaseName = 'pavlovspec-for-groovy'
+version = '0.3.0'
 
 repositories {
     mavenCentral()

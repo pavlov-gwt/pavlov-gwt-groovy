@@ -1,10 +1,9 @@
-package com.github.pavlov.gwt.spec
+package com.github.pavlovspec
 
-import static com.github.pavlov.gwt.spec.Spec.given
+import static com.github.pavlovspec.Spec.given
 
+import com.github.pavlovspec.report.NoOpSpecReporter
 import org.junit.Test
-
-import com.github.pavlov.gwt.report.NoOpSpecReporter
 
 class SpecSpec {
 
